@@ -179,7 +179,7 @@ where
         );
     }
 
-    fn on_event(
+    fn update(
         &mut self,
         tree: &mut Tree,
         event: Event,
@@ -202,7 +202,7 @@ where
             layout,
             &self.view,
             |tree, renderer, layout, element| {
-                element.as_widget_mut().on_event(
+                element.as_widget_mut().update(
                     tree,
                     event,
                     layout,
